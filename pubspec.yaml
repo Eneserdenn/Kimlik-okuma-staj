@@ -1,0 +1,46 @@
+name: tckk_nfc_reader
+description: "A Flutter application to read Turkish ID Card (TCKK) data and colored photo over NFC for face recognition integration."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State Management
+  flutter_riverpod: ^2.5.1
+  riverpod: ^2.5.1
+
+  # NFC & Passport Reading (ICAO 9303 MRTD)
+  flutter_nfc_kit: ^3.4.0
+  dmrtd:
+    path: ./dmrtd
+
+  # Native APIs & Permissions
+  path_provider: ^2.1.2
+  permission_handler: ^11.3.1
+
+  # Camera for Face Verification Overlay
+  camera: ^0.10.5+8
+
+  # Image processing (needed to convert JPEG2000 formats from NFC DG2)
+  image: ^4.1.3
+
+  # UI & Styling
+  cupertino_icons: ^1.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  
+  assets:
+    # Asset guide image showing card and CAN number location
+    - assets/images/
